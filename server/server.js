@@ -14,7 +14,7 @@ const app = express();
 const PORT= process.env.PORT||5000;
 const MONGO_URL=process.env.MONGO_URL||"mongodb://127.0.0.1:27017/video_project"
 
-app.use(cors({origin:"http://localhost:5174",credentials:true}));
+app.use(cors({origin:["http://localhost:5174","video-library-frontend-hhf9q6rmz-tannu-2001s-projects.vercel.app"],credentials:true}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
