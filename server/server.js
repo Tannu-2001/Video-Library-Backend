@@ -11,7 +11,7 @@ import mongoose from 'mongoose';
 
 const app = express();
 
-const PORT= process.env.PORT||5173;
+const PORT= process.env.PORT||5000;
 const MONGO_URL=process.env.MONGO_URL||"mongodb://127.0.0.1:27017/video_project"
 
 app.use(cors({origin:"http://localhost:5174",credentials:true}));
