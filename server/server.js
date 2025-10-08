@@ -13,8 +13,21 @@ const app = express();
 
 const PORT= process.env.PORT||5000;
 const MONGO_URL=process.env.MONGO_URL||"mongodb://127.0.0.1:27017/video_project"
+const allowedOrigins = ["http://localhost:5174","https://video-library-frontend-eta.vercel.app"];
 
-app.use(cors({origin:["http://localhost:5174","video-library-frontend-hhf9q6rmz-tannu-2001s-projects.vercel.app"],credentials:true}));
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
