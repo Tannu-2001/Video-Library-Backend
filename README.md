@@ -37,3 +37,13 @@ DB_NAME=video_project
 - Video upload APIs
 - Role-based access
 - Improved authentication security
+
+## Screenshots
+### Get User API
+![Get User API](./screenshots/videouser.png)
+### Get Video API
+![Get Video API](./screenshots/videovideo.png)
+### MongoDB Collection
+![MongoDB Collection](./screenshots/videomongo.png)
+### Folder Structure
+![Folder Structure](./screenshots/videofolder.png)
